@@ -4,6 +4,8 @@ PHP/HTML/JavaScript app which displays currently playing song from Spotify along
 
 When a song is not playing, app displays recently played tracks, total number of scrobbles etc.
 
+![Screenshot of Now Playing](https://raw.githubusercontent.com/jarilehtinen/project-images/main/now-playing.jpg)
+
 ## Installation
 
 1. Create an app on [Spotify for Developers](https://developer.spotify.com/dashboard/applications) site
