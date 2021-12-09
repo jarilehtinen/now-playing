@@ -78,7 +78,7 @@ function stopPlaying(track) {
     document.querySelector('.now-playing').classList.add('hidden');
     document.querySelector('.last-played').classList.remove('hidden');
 
-    document.title = 'Last played';
+    document.title = 'Last Played';
 
     playing = false;
 }
