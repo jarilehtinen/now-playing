@@ -1,0 +1,17 @@
+{
+    "name": "jarilehtinen/now-playing",
+    "autoload": {
+        "psr-4": {
+            "Jarilehtinen\\NowPlaying\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jari Lehtinen",
+            "email": "jari@feature.fi"
+        }
+    ],
+    "require": {
+        "jwilsson/spotify-web-api-php": "^5.0"
+    }
+}

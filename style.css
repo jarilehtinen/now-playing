@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
+* {
+    box-sizing: border-box;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #000;
+	color: #fff;
+	font-family: 'Red Hat Text', sans-serif;
+	overflow: hidden;
+	margin: 0;
+}
+
+.now-playing {
+	margin: 0px auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+h1 {
+	font-size: 18px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	color: #8D9194;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.artwork {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: .5;
+	filter: blur(40px);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: inset 0 0 50px #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.image {
+	width: 500px;
+	height: 500px;
+	border-radius: 6px;
+	position: relative;
+	z-index: 2;
+	margin-top: 30px;
+	box-shadow: 0 0 40px 4px rgba(0, 0, 0, 0.8);
+}
+
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 500px;
+}
+
+.text {
+	text-align: center;
+}
+
+.track,
+.artist,
+.album {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 500px;
+}
+
+.track {
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 35px;
+	margin: 15px 0 3px 0;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.artist {
+	font-size: 28px;
+	line-height: 32px;
+	margin: 0 0 6px 0;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.album {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.5);
+	font-weight: 400;
+	font-style: italic;
+	margin: 0 0 6px 0;
+}
+
+.meta {
+	font-weight: 100;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.scrobbles, .loved {
+	display: inline-block;
+}
+
+/* Statistics */
+.last-played-main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 80%;
+}
+
+.statistics-user-image {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 25px;
+	margin-right: 5px;
+}
+
+.statistics-user {
+	font-weight: bold;
+	font-size: 38px;
+	line-height: 45px;
+	margin: 0 0 5px 20px;
+}
+
+.statistics {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	padding: 9px 10px 10px 14px;
+	margin: 11px 10px 30px 10px;
+	height: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.statistics-data {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.statistics-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px 0px 0px 15px;
+	opacity: .7;
+	font-weight: 500;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.statistics-last-played-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
+	z-index: 1;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 8px;
+	filter: blur(1px);
+}
+
+.statistics-last-played-info {
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.statistics-follower-count,
+.statistics-scrobble-count {
+	margin-top: 0px;
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #fff;
+	text-align: center;
+}
+
+.statistics-artist-track {
+	width: 100%;
+}
+
+.statistics-track {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	font-size: 24px;
+	line-height: 26px;
+	height: 26px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #fff;
+}
+
+.statistics-artist {
+	display: block;
+	width: 90%;
+	margin: 8px auto 0 auto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.statistics-recent-tracks-title {
+	clear: both;
+	opacity: 0.7;
+	font-weight: 500;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.statistics-recent-tracks {
+	display: grid;
+	width: 100%;
+	height: 150px;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+	overflow: hidden;
+}
+
+.statistics-recent-track {
+	width: 130px;
+	height: 130px;
+	border-radius: 6px;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-height: 800px) {
+	.main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90%;
+	}
+
+	.image {
+		float: left;
+		width: auto;
+		height: 90%;
+		margin-top: 0;
+	}
+
+	.text {
+		float: left;
+		padding-left: 40px;
+		text-align: left;
+	}
+
+	.track,
+	.artist,
+	.album {
+		max-width: 100%;
+	}
+
+	.main {
+		width: 80%;
+	}
+
+	.last-played-main {
+		width: 90%;
+	}
+
+	.statistics-track {
+		font-size: 17px;
+		line-height: 19px;
+		height: 19px;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.statistics-data {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.statistics-followers {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.image {
+		width: 100%;
+		height: auto;
+	}
+
+	.track,
+	.artist,
+	.album {
+		max-width: 100%;
+	}
+
+	.main {
+		width: 80%;
+	}
+	
+	.statistics-follower-count,
+	.statistics-scrobble-count {
+		font-size: 30px;
+	}
+}

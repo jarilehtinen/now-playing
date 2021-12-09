@@ -1,0 +1,9 @@
+.DS_Store
+/.spotify-access-tokens
+/auth.php
+/node_modules/
+/.eslintrc
+/.eslintrc.js
+/package-lock.json
+/package.json
+/vendor/
