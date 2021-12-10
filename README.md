@@ -27,8 +27,12 @@ When a song is not playing, app displays recently played tracks, total number of
    define('SPOTIFY_CLIENT_ID', 'YOUR-CLIENT-ID');
    define('SPOTIFY_CLIENT_SECRET', 'YOUR-CLIENT-SECRET');
    define('SPOTIFY_REDIRECT_URI', '/spotify-callback/');
-   
    ```
+   
+4. Run Composer `php composer.phar install` or if you have Composer installed globally `composer install` 
+
+   Composer installs [Spotify Web API PHP](https://github.com/jwilsson/spotify-web-api-php). If you are not familiar with Composer, head to [getcomposer.org](https://getcomposer.org/download/).
+
 
 ## What, why?
 
