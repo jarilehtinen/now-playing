@@ -6,6 +6,8 @@ When a song is not playing, app displays recently played tracks, total number of
 
 ![Screenshot of Now Playing](https://raw.githubusercontent.com/jarilehtinen/project-images/main/now-playing.jpg)
 
+![Another screenshot of Now Playing](https://raw.githubusercontent.com/jarilehtinen/project-images/main/now-playing-2.jpg)
+
 ## Installation
 
 1. Create an app on [Spotify for Developers](https://developer.spotify.com/dashboard/applications) site
