@@ -2,6 +2,11 @@
 
 require 'vendor/autoload.php';
 
+if (!file_exists(__DIR__ . '/auth.php')) {
+    echo 'auth.php file not found, see readme for instructions';
+    exit;
+}
+
 require_once(__DIR__ . '/auth.php');
 require_once('app/NowPlaying.php');
 require_once('app/API/LastFM.php');
