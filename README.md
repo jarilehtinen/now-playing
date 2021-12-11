@@ -16,7 +16,7 @@ When a song is not playing, app displays recently played tracks, total number of
 
 2. Create API account on [LastFM](https://www.last.fm/api/account/create)
 
-   Note: you can leave the *Callback URL* empty
+   Note: you can leave the *Callback URL* empty.
 
 3. Create `/auth.php` file containing following information:
 
