@@ -21,7 +21,7 @@ class Spotify
         'auto_refresh' => true,
     ];
     private $tracks;
-    private $accessTokenFile = '.spotify-access-tokens';
+    private $accessTokensFilePath = SPOTIFY_ACCESS_TOKENS_FILE_PATH;
 
     /**
      * Construct
@@ -62,7 +62,7 @@ class Spotify
     private function readStoredTokens()
     {
         // Get tokens from file
-        $json = file_get_contents($this->accessTokenFile);
+        $json = file_get_contents($this->accessTokensFilePath);
 
         if (!$json) {
             return false;
@@ -101,7 +101,7 @@ class Spotify
     private function updateSavedAccessTokens()
     {
         file_put_contents(
-            dirname(dirname(__DIR__)).'/'.$this->accessTokenFile,
+            $this->accessTokensFilePath,
             json_encode([
                 'access' => $this->session->getAccessToken(),
                 'refresh' => $this->session->getRefreshToken()

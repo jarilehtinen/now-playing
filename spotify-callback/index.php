@@ -20,13 +20,27 @@ if (!$accessToken || !$refreshToken) {
     exit;
 }
 
+// Store tokens in a file
+$filePath = SPOTIFY_ACCESS_TOKENS_FILE_PATH;
+
+if (!$filePath) {
+    echo 'SPOTIFY_ACCESS_TOKENS_FILE_PATH not defined';
+    exit;
+}
+
 file_put_contents(
-    '../.spotify-access-tokens',
+    $filePath,
     json_encode([
         'access' => $accessToken,
         'refresh' => $refreshToken
     ])
 );
+
+// Check if file exists
+if (!file_exists($filePath)) {
+    echo $filePath.' is not writable?';
+    exit;
+}
 
 header('location: ../');
 exit;
