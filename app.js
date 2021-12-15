@@ -53,12 +53,12 @@ function updateNowPlaying(track) {
     document.querySelector('.image').src = track.image;
     document.querySelector('.artwork').style.backgroundImage = 'url(' + track.image + ')';
 
-    if (track.playCount == 1) {
-        document.querySelector('.playCount').innerHTML = track.playCount + ' play';
-    } else if (track.playCount > 1) {
-        document.querySelector('.playCount').innerHTML = track.playCount + ' plays';
+    if (track.scrobbles == 1) {
+        document.querySelector('.scrobbles').innerHTML = track.scrobbles + ' play';
+    } else if (track.scrobbles > 1) {
+        document.querySelector('.scrobbles').innerHTML = track.scrobbles + ' plays';
     } else {
-        document.querySelector('.playCount').innerHTML = '';
+        document.querySelector('.scrobbles').innerHTML = '';
     }
 
     if (track.loved) {
