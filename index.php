@@ -105,12 +105,16 @@ $app = new NowPlaying();
                 <div class="statistics-recent-tracks-title">Recent Tracks</div>
                 <div class="statistics-recent-tracks">
                     <?php foreach ($app->getRecentTracks(1) as $track) { ?>
-                        <a href="<?php echo $track['url']; ?>">
+                        <?php if (!$app->isKiosk()) : ?>
+                            <a href="<?php echo $track['url']; ?>">
+                        <?php endif; ?>
                             <img class="statistics-recent-track" 
                                 src="<?php echo $track['image']; ?>" 
                                 title="<?php echo $track['artist']; ?> &ndash; <?php echo $track['name']; ?>" 
                                 width="300">
+                        <?php if (!$app->isKiosk()) : ?>
                             </a>
+                        <?php endif; ?>
                     <?php } ?>
                 </div>
             <?php endif; ?>

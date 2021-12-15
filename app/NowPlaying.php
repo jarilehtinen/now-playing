@@ -33,6 +33,18 @@ class NowPlaying
     }
 
     /**
+     * Is kiosk
+     */
+    public function isKiosk()
+    {
+        if (defined('KIOSK') && KIOSK) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Get current track
      */
     public function getCurrentTrack()

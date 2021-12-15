@@ -22,7 +22,9 @@ When a song is not playing, app displays recently played tracks, total number of
 
    ```php
    <?php
-   
+
+   define('KIOSK', false);
+      
    define('LASTFM_USER', 'YOUR-LASTFM-USERNAME');
    define('LASTFM_API_KEY', 'YOUR-LASTFM-API-KEY');
    
