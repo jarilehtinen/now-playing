@@ -74,6 +74,7 @@ function updateNowPlaying(track) {
 function stopPlaying(track) {
     document.querySelector('.statistics-track').innerHTML = track.name;
     document.querySelector('.statistics-artist').innerHTML = track.artist;
+    document.querySelector('.statistics-last-played-image').style.backgroundImage = 'url(' + track.image + ')';
 
     document.querySelector('.now-playing').classList.add('hidden');
     document.querySelector('.last-played').classList.remove('hidden');
