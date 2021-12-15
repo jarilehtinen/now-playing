@@ -140,25 +140,25 @@ h1 {
 	font-weight: bold;
 	font-size: 38px;
 	line-height: 45px;
-	margin: 0 0 5px 20px;
+	margin-bottom: 25px;
+}
+
+.statistics-data {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 30px;
 }
 
 .statistics {
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 8px;
 	padding: 9px 10px 10px 14px;
-	margin: 11px 10px 30px 10px;
 	height: 140px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-}
-
-.statistics-data {
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .statistics-header {
